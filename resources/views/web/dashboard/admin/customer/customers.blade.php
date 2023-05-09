@@ -142,7 +142,7 @@
             <h2>Daftar Pelanggan</h2>
             <div class="table">
               <a href="/web.dashboard.admin.customer.tambahcustomer" class="tambah-data">Tambah Data</a>
-              <table class="table-cust" style="width: 100%; margin-top: 10px;">
+              <table class="table-cust" style="width: 100%;">
               <thead>
                   <th style="width: 5%">Id</th>
                   <th style="width: 11%">Nama</th>
