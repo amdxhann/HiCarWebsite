@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  color: black;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: 'jumbopict login';
+}
+
+.jumbopict {
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.back ion-icon {
+  font-size: 50px;
+  --ionicon-stroke-width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  grid-area: login;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.signin {
+  width: 70%;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.login h1 {
+  align-self: flex-start;
+  margin-bottom: -1rem;
+  position: relative;
+}
+
+.forms {
+  width: 70%;
+  margin-top: -5rem;
+  color: rgb(169, 166, 166);
+  position: relative;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.1rem;
+  position: relative;
+}
+
+
+#form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: hsl(0, 79%, 63%);
+  border: none;
+  border-radius: 4px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+#form button:hover {
+  background-color: rgb(198, 194, 194);
+  cursor: pointer;
+}
+
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  display: block;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+
+form a {
+  align-self: flex-end;
+}
+.termsOfUse {
+  align-self: flex-start;
+  color: rgb(169, 166, 166);
+}
+
+@media screen and (width <= 678px) {
+  .container {
+    background-image: url('../images/login-admin.gif');
+    background-position: center;
+    background-size: cover;
+    grid-template-columns: 1fr;
+    position: static;
+    color: white;
+  }
+  .login {
+    /* background-color: aliceblue; */
+    display: flex;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  .button {
+    margin-top: 0;
+  }
+  .form {
+    margin-top: 0;
+    color: white;
+  }
+  .termsOfUse {
+    color: white;
+  }
+  .termsOfUse a {
+    color: grey;
+  }
+  label {
+    color: white;
+  }
+  .signin{
+    margin-bottom: 4rem;
+  }
+  .signin a {
+    color: gray;
+  }
+  .login h1 {
+    align-self: flex-start;
+    margin-bottom: -1.5rem;
+    position: relative;
+    font-size: 1.5rem;
+  }
+
+}
