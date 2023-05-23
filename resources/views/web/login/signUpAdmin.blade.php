@@ -24,31 +24,40 @@
         </div>
 
         <div class="forms">
-          <form action="/" id="form">
-
-              
+          <form action="/web.login.signUpAdmin" id="form" method="POST">  
+            @csrf            
             <div class="input-control">
               <label for="email">Email Adress</label>
-              <input type="text" name="email" id="email" />
+              <input type="email" name="email" id="email" required/>
               <div class="error"></div>
             </div>
             <div class="input-control">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="username" />
+              <label for="nama">Username</label>
+              <input type="text" name="nama" id="nama" required/>
               <div class="error"></div>
             </div>
+            <div class="input-control">
+              <label for="alamat">Alamat</label>
+              <input type="text" name="alamat" id="alamat" required/>
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="tanggal_lahir">Tanggal Lahir</label>
+              <input type="date" name="tanggal_lahir" id="tanggal_lahir" required/>
+              <div class="error"></div>
+            </div>
+            <div class="input-control">
+              <label for="jenis_kelamin">Jenis Kelamin</label>
+              <select id="jenis_kelamin" name="jenis_kelamin" class="input-control" required style="  border: 2px solid #f0f0f0; border-radius: 4px; display: block; font-size: 12px; padding: 10px; width: 104%;">
+                <option value="KTP">Pria</option>
+                <option value="SIM">Wanita</option>
+              </select>
+            </div> <br>
             <div class="input-control">
               <label for="password">Password</label>
-              <input type="Password" name="password" id="password" />
+              <input type="Password" name="password" id="password" required/>
               <div class="error"></div>
             </div>
-            <div class="input-control">
-              <label for="password">Confirm Password</label>
-              <input type="Password" name="password" id="password2" />
-              <div class="error"></div>
-            </div>
-            
-
             <div class="termsOfUse">
               <p style="margin-bottom: 0px;">Already have an account? 
                 <a href="/loginAdmin">Login</a>

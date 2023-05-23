@@ -4,62 +4,62 @@ namespace App\Http\Controllers;
 
 use App\Models\Cars;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class CarsController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function tcars()
     {
-        //
+        return view('web.dashboard.admin.cars.tambahcars', [
+            'title' => 'Tambah Mobil',
+        ]);
+    }
+    
+    public function scars(Request $request)
+    {
+        $car=new cars;
+        $car->foto_mobil=$request->foto_mobil;
+        $car->no_polisi=$request->no_polisi;
+        $car->merk=$request->merk;
+        $car->tahun=$request->tahun;
+        $car->transmisi=$request->transmisi;
+        $car->save();
+        
+        return redirect('web.dashboard.admin.cars.cars')->with("update", "Mobil Berhasil Ditambahkan!");
+    }
+    public function dcars($id)
+    {
+        cars::find($id)->delete();
+        return redirect()->back()->with("update", "Mobil Berhasil di Hapus!");
+    }
+    public function ucars($id)
+    {
+        return view('web.dashboard.admin.cars.editcars', [
+            'title' => 'Update Cars',
+            'cars'=> Cars::find($id),
+        ]);
+    }
+    public function ecars(Request $request)
+    {
+        $car= cars::find($request->id);
+        $car->foto_mobil=$request->foto_mobil;
+        $car->no_polisi=$request->no_polisi;
+        $car->merk=$request->merk;
+        $car->tahun=$request->tahun;
+        $car->transmisi=$request->transmisi;
+        $car->save();
+        
+        return redirect('/web.dashboard.admin.cars.cars')->with("update","Mobil Berhasil Diupdate!");
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function back(Request $request)
     {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Cars $cars)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Cars $cars)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Cars $cars)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Cars $cars)
-    {
-        //
+        return view('web.dashboard.admin.cars.cars', [
+            'title' => 'cars',
+            'cars' => Cars::all()
+        ]);
     }
 }

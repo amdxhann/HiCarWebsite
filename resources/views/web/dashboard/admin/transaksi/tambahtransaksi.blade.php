@@ -18,43 +18,52 @@
           <div class="card">
             <div class="card-header">
               <h4>
-                Customer Add
-                <a href="customers.html" class="btn btn-danger float-end ">BACK</a>
+                Transaction Add
+                <a href="/web.dashboard.admin.transaksi.transaksi" class="btn btn-danger float-end ">BACK</a>
               </h4>
             </div>
             <div class="card-body">
-              <form action="code.php" method="POST">
-                <input type="hidden" name="student_id" ? />
-
+              <form action="/web.dashboard.admin.transaksi.tambahtransaksi" method="POST">
+                @csrf
                 <div class="mb-3">
                   <label>Nama</label>
-                  <input type="text" name="name" class="form-control" />
+                  <input type="text" name="nama" class="form-control" />
                 </div>
                 <div class="mb-3">
-                  <label for="">Jaminan</label>
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" class="form-control">
-                    <input type="submit" style="margin-top: 10px;">
-                  </form>
+                    <label for="jaminan">Jaminan</label> <br>
+                    <select id="jaminan" name="jaminan" class="form-control">
+                      <option value="KTP">KTP</option>
+                      <option value="SIM">SIM</option>
+                      <option value="KK">KK</option>
+                      <option value="KP">KP</option>
+                      <option value="lainnya">lainnya</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                   <label>Email</label>
                   <input type="email" name="email" class="form-control" />
                 </div>
                 <div class="mb-3">
-                  <label>Phone</label>
-                  <input type="text" name="phone" class="form-control" />
-                </div>
-                <div class="mb-3">
                   <label>No SIM</label>
-                  <input type="text" name="course" class="form-control" />
+                  <input type="text" name="no_sim" class="form-control" />
                 </div>
                 <div class="mb-3">
                   <label>No HP</label>
-                  <input type="text" name="course" class="form-control" />
+                  <input type="text" name="no_hp" class="form-control" />
                 </div>
                 <div class="mb-3">
-                  <button type="submit" name="update_student" class="btn btn-primary ">Add Customer</button>
+                    <label for="durasi">Durasi</label> <br>
+                    <select id="durasi" name="durasi" class="form-control">
+                      <option value="12 jam">12 jam</option>
+                      <option value="24 jam">24 jam</option>
+                      <option value="48 jam">48 jam</option>
+                      <option value="96 jam">96 jam</option>
+                      <option value="168 jam">168 jam</option>
+                      <option value="lainnya">lainnya</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-primary">Tambah</button>
                 </div>
               </form>
             </div>

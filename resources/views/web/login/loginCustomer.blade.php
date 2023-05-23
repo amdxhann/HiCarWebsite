@@ -16,7 +16,7 @@
       <div class="jumbopict"><img src="{{ asset('web/images/loigncustomer.gif') }}" style="margin-left: 100px; margin-top: 50px;" ></div>
       <div class="login">
         <div class="signin" style="margin-bottom: 50px;">
-          <a href="/signUpCustomer" class="back" aria-label="Profile">
+          <a href="/web.login.signUpCustomer" class="back" aria-label="Profile">
             <ion-icon name="arrow-undo-circle-outline"></ion-icon>
           </a>
           <h1>Log In</h1> 
@@ -39,15 +39,15 @@
         </div>
 
         <div class="forms">
-          <form action="/" id="form">
+          <form action="/web.login.loginCustomer" id="form">
             <div class="input-control">
-              <label for="username">Username</label>
-              <input type="text" name="username" id="username" />
+              <label for="nama">Username</label>
+              <input type="text" name="nama" id="customer_name" />
               <div class="error"></div>
             </div>
             <div class="input-control">
-              <label for="password">Your password</label>
-              <input type="Password" name="password" id="password" />
+              <label for="customer_password">Your password</label>
+              <input type="Password" name="customer_password" id="customer_password" />
               <div class="error"></div>
             </div>           
 

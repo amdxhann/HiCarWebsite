@@ -45,7 +45,7 @@
           </li>
   
           <li>
-              <a href="/transaksi">
+              <a href="/web.dashboard.admin.transaksi.transaksi">
                   <span class="icon">
                       <ion-icon name="cart-outline"></ion-icon>
                   </span>
@@ -54,14 +54,14 @@
               </li>
   
           <li>
-          <a href="/driver">
+          <a href="/web.dashboard.admin.driver.driver">
               <span class="icon"> <ion-icon name="accessibility-outline"></ion-icon> </span>
               <span class="title">Driver</span>
           </a>
           </li>
   
           <li>
-          <a href="/cars">
+          <a href="/web.dashboard.admin.cars.cars">
               <span class="icon"> <ion-icon name="car-outline"></ion-icon> </span>
               <span class="title">Cars</span>
           </a>

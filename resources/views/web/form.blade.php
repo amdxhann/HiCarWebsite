@@ -60,7 +60,7 @@
             <div class="body" >    
                 <div class="grid">
                     <div class="grid-item">
-                        <a href="/signUpCustomer">
+                        <a href="/web.login.signUpCustomer">
                         <div class="card">
                             <img class="card-img" src="{{ asset('web/images/customer.gif') }}"/>
                             <div class="card-content">
@@ -71,7 +71,7 @@
                     </div>
                         
                     <div class="grid-item">
-                        <a href="/signUpAdmin">
+                        <a href="/web.login.signUpAdmin">
                         <div class="card">
                             <img class="card-img" src="{{ asset('web/images/admin.gif') }}"/>
                                 <div class="card-content">

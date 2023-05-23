@@ -18,39 +18,49 @@
             <div class="card-header">
               <h4>
                 Customer Edit
-                <a href="customers.html" class="btn btn-danger float-end ">BACK</a>
+                <a href="/web.dashboard.admin.transaksi.transaksi" class="btn btn-danger float-end ">BACK</a>
               </h4>
             </div>
             <div class="card-body">
-              <form action="code.php" method="POST">
-                <input type="hidden" name="student_id" ? />
-
+              <form action="/web.dashboard.admin.transaksi.edittransaksi" method="POST">
+                @csrf
+                <input type="hidden" name="id" value="{{$transaction->id}}" />
                 <div class="mb-3">
                   <label>Nama</label>
-                  <input type="text" name="name" class="form-control" />
+                  <input type="text" name="nama" class="form-control" value="{{$transaction->nama}}"/>
                 </div>
                 <div class="mb-3">
-                  <label for="">Jaminan</label>
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" class="form-control">
-                    <input type="submit" style="margin-top: 10px;">
-                  </form>
+                    <label for="jaminan">Jaminan</label> <br>
+                    <select id="jaminan" name="jaminan" class="form-control" value="{{$transaction->jaminan}}">
+                      <option value="KTP">KTP</option>
+                      <option value="SIM">SIM</option>
+                      <option value="KK">KK</option>
+                      <option value="KP">KP</option>
+                      <option value="lainnya">Lainnya</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                   <label>Email</label>
-                  <input type="email" name="email" class="form-control" />
+                  <input type="email" name="email" class="form-control" value="{{$transaction->email}}"/>
                 </div>
                 <div class="mb-3">
-                  <label>No. SIM</label>
-                  <input type="text" name="course" class="form-control" />
+                  <label>No SIM</label>
+                  <input type="text" name="no_sim" class="form-control" value="{{$transaction->no_sim}}"/>
                 </div>
                 <div class="mb-3">
-                  <label>No. HP</label>
-                  <input type="text" name="course" class="form-control" />
+                  <label>No HP</label>
+                  <input type="text" name="no_hp" class="form-control" value="{{$transaction->no_hp}}"/>
                 </div>
                 <div class="mb-3">
-                  <label>Durasi</label>
-                  <input type="text" name="Durasi" class="form-control" />
+                    <label for="durasi">Durasi</label> <br>
+                    <select id="durasi" name="durasi" class="form-control" value="{{$transaction->durasi}}">
+                      <option value="12 jam">12 jam</option>
+                      <option value="24 jam">24 jam</option>
+                      <option value="48 jam">48 jam</option>
+                      <option value="96 jam">96 jam</option>
+                      <option value="168 jam">168 jam</option>
+                      <option value="lainnya">Lainnya</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                   <button type="submit" name="update_student" class="btn btn-primary ">Edit Customer</button>

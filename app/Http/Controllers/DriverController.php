@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Driver;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DriverController extends Controller
 {
@@ -12,54 +13,63 @@ class DriverController extends Controller
      */
     public function index()
     {
-        //
+        return view('web.dashboard.admin.driver.driver', [
+            'title' => 'Driver',
+            'driver' => Driver::all()
+        ]);
+    }
+    
+    public function tdriver()
+    {
+        return view('web.dashboard.admin.driver.tambahdriver', [
+            'title' => 'Tambah Driver',
+        ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function sdriver(Request $request)
     {
-        //
+        $driver=new driver;
+        $driver->foto_profil=$request->foto_profil;
+        $driver->nama=$request->nama;
+        $driver->usia=$request->usia;
+        $driver->email=$request->email;
+        $driver->no_sim=$request->no_sim;
+        $driver->no_hp=$request->no_hp;
+        $driver->save();
+        
+        return redirect('web.dashboard.admin.driver.driver')->with("update", "Driver Berhasil Ditambahkan!");
+    }
+    public function ddriver($id)
+    {
+        driver::find($id)->delete();
+        return redirect()->back()->with("update", "Driver Berhasil di Hapus!");
+    }
+    public function udriver($id)
+    {
+        return view('web.dashboard.admin.driver.editdriver', [
+            'title' => 'Update driver',
+            'driver'=> driver::find($id),
+        ]);
+    }
+    public function edriver(Request $request)
+    {
+        $driver= driver::find($request->id);
+        $driver->foto_profil=$request->foto_profil;
+        $driver->nama=$request->nama;
+        $driver->usia=$request->usia;
+        $driver->email=$request->email;
+        $driver->no_sim=$request->no_sim;
+        $driver->no_hp=$request->no_hp;
+        $driver->save();
+        
+        return redirect('/web.dashboard.admin.driver.driver')->with("update","Driver Berhasil Diupdate!");
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
+    public function back(Request $request)
     {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Driver $driver)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Driver $driver)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, Driver $driver)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Driver $driver)
-    {
-        //
+        return view('web.dashboard.admin.driver.driver', [
+            'title' => 'driver',
+            'driver' => driver::all()
+        ]);
     }
 }

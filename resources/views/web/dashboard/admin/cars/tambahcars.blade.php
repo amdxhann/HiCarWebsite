@@ -18,39 +18,35 @@
             <div class="card-header">
               <h4>
                 Car Add
-                <a href="cars.html" class="btn btn-danger float-end">BACK</a>
+                <a href="web.dashboard.admin.cars.cars" class="btn btn-danger float-end">BACK</a>
               </h4>
             </div>
             <div class="card-body">
-              <form action="code.php" method="POST">
-                <input type="hidden" name="student_id" ? />
-
-                <div class="mb-3">
-                  <label>No. Polisi</label>
-                  <input type="text" name="name" class="form-control" />
-                </div>
+              <form action="web.dashboard.admin.cars.tambahcars" method="POST">
+                @csrf
+                <input type="hidden" name="id"  />
                 <div class="mb-3">
                   <label for="">Foto Mobil</label>
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" class="form-control">
-                    <input type="submit" style="margin-top: 10px;">
-                  </form>
+                    <input type="file" id="myFile" name="foto_mobil" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label>No. Polisi</label>
+                  <input type="text" name="no_polisi" class="form-control" />
                 </div>
                 <div class="mb-3">
                   <label>Merk</label>
-                  <input type="text" name="name" class="form-control" />
-                </div>
-                <div class="mb-3">
-                  <label>Brand</label>
-                  <input type="email" name="email" class="form-control" />
+                  <input type="text" name="merk" class="form-control" />
                 </div>
                 <div class="mb-3">
                   <label>Tahun</label>
-                  <input type="text" name="course" class="form-control" />
+                  <input type="text" name="tahun" class="form-control" />
                 </div>
                 <div class="mb-3">
                   <label>Transmisi</label>
-                  <input type="text" name="course" class="form-control" />
+                  <select type="text" name="transmisi" class="form-control" />
+                    <option value="Manual">Manual</option>
+                    <option value="Matic">Matic</option>
+                  </select>
                 </div>
                 <div class="mb-3">
                   <button type="submit" name="update_student" class="btn btn-primary">Add Car</button>

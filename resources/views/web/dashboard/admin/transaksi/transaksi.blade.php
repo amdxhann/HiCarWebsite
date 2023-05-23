@@ -54,14 +54,14 @@
               </li>
   
           <li>
-          <a href="/driver">
+          <a href="/web.dashboard.admin.driver.driver">
               <span class="icon"> <ion-icon name="accessibility-outline"></ion-icon> </span>
               <span class="title">Driver</span>
           </a>
           </li>
   
           <li>
-          <a href="/cars">
+          <a href="/web.dashboard.admin.cars.cars">
               <span class="icon"> <ion-icon name="car-outline"></ion-icon> </span>
               <span class="title">Cars</span>
           </a>
@@ -141,9 +141,10 @@
           <div class="cardHeader" style="text-align: center">
             <h2>Daftar Transaksi</h2>
             <div class="table">
-              <a href="/dashboard/admin/customer/tambahcustomer.html" class="tambah-data">Tambah Data</a>
+              <a href="/web.dashboard.admin.transaksi.tambahtransaksi" class="tambah-data">Tambah Data</a>
               <table class="table-cust" style="width: 100%; margin-top: 10px;">
-                <tr>
+                <thead>
+                  <th style="display:none">Id</th>
                   <th style="width: 20%">Nama</th>
                   <th style="width: 15%">Jaminan</th>
                   <th style="width: 20%">Email</th>
@@ -151,98 +152,25 @@
                   <th style="width: 10%">No. HP</th>
                   <th style="width: 10%">Durasi</th>
                   <th style="width: 15%">Action</th>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>Ten Hag</td>
-                  <td> <a href="{{ asset('web/images/contohktp.jpeg') }}"> <img src="{{ asset('web/images/contohktp.jpeg') }}" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>Tenhag@gmail.com</td>
-                  <td>1234567</td>
-                  <td>081341934591</td>
-                  <td>24 jam</td>
-                  <td class="action" style="margin-top: 60px;">
-                    <a href=".././customer/editcust.html"><button class="deletebutton" style="margin-right: 10px">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                  </td>
-                </tr>
-
+                </thead>
+                <tbody>
+                  @foreach ($transaction as $item)
+                  <tr align="center">
+                    <td style="display:none">{{ $item->id }}</td>
+                    <td>{{ $item->nama}}</td>
+                    <td>{{ $item->jaminan}}</td>
+                    <td>{{ $item->email}}</td>
+                    <td>{{ $item->no_sim}}</td>
+                    <td>{{ $item->no_hp}}</</td>
+                    <td>{{ $item->durasi}}</td>
+                    <td> 
+                      <a href="/web.dashboard.admin.transaksi.transaksi/{{ $item->id }}/edit"><button type="button" class="deletebutton">Edit</button></a>
+                      <a href="/web.dashboard.admin.transaksi.transaksi/{{ $item->id }}/delete" onclick="return confirm('Konfirmasi penghapusan data Transaksi?');"><button 
+                      type="submit" class="deletebutton actionbutton">Delete</button></a>
+                    </td>
+                </tr>    
+                  @endforeach
+                </tbody>
               </table>
             </div>
           </div>

@@ -18,44 +18,36 @@
             <div class="card-header">
               <h4>
                 Driver Edit
-                <a href="./driver.html" class="btn btn-danger float-end ">BACK</a>
+                <a href="web.dashboard.admin.driver.driver" class="btn btn-danger float-end ">BACK</a>
               </h4>
             </div>
             <div class="card-body">
-              <form action="code.php" method="POST">
-                <input type="hidden" name="student_id" ? />
-
-                
+              <form action="web.dashboard.admin.driver.editdriver" method="POST">
+                @csrf
+                <input type="hidden" name="id" value="{{$driver->id}}" />
                 <div class="mb-3">
                   <label for="">Foto Driver</label>
-                  <form action="/action_page.php">
-                    <input type="file" id="myFile" name="filename" class="form-control">
-                    <input type="submit" style="margin-top: 10px;">
-                  </form>
+                    <input type="file" id="myFile" name="foto_profil" class="form-control" value="{{$driver->foto_profil}}" />
                 </div>
                 <div class="mb-3">
                   <label>Nama</label>
-                  <input type="text" name="name" class="form-control" />
+                  <input type="text" name="nama" class="form-control" value="{{$driver->nama}}"/>
                 </div>
                 <div class="mb-3">
                   <label>Usia</label>
-                  <input type="text" name="name" class="form-control" />
+                  <input type="text" name="usia" class="form-control" value="{{$driver->usia}}"/>
                 </div>
                 <div class="mb-3">
                   <label>Email</label>
-                  <input type="email" name="email" class="form-control" />
-                </div>
-                <div class="mb-3">
-                  <label>Phone</label>
-                  <input type="text" name="phone" class="form-control" />
+                  <input type="email" name="email" class="form-control" value="{{$driver->email}}"/>
                 </div>
                 <div class="mb-3">
                   <label>No SIM</label>
-                  <input type="text" name="course" class="form-control" />
+                  <input type="text" name="no_sim" class="form-control" value="{{$driver->no_sim}}"/>
                 </div>
                 <div class="mb-3">
                   <label>No HP</label>
-                  <input type="text" name="course" class="form-control" />
+                  <input type="text" name="no_hp" class="form-control" value="{{$driver->no_hp}}"/>
                 </div>
                 <div class="mb-3">
                   <button type="submit" name="update_student" class="btn btn-primary ">Edit Driver</button>

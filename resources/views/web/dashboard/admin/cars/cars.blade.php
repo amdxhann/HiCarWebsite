@@ -27,7 +27,7 @@
           </li>
   
           <li>
-          <a href="/dashboard">
+          <a href="/dashboardAdmin">
               <span class="icon">
               <ion-icon name="home-outline"></ion-icon>
               </span>
@@ -45,7 +45,7 @@
           </li>
   
           <li>
-              <a href="/transaksi">
+              <a href="/web.dashboard.admin.transaksi.transaksi">
                   <span class="icon">
                       <ion-icon name="cart-outline"></ion-icon>
                   </span>
@@ -54,7 +54,7 @@
               </li>
   
           <li>
-          <a href="/driver">
+          <a href="/web.dashboard.admin.driver.driver">
               <span class="icon"> <ion-icon name="accessibility-outline"></ion-icon> </span>
               <span class="title">Driver</span>
           </a>
@@ -141,74 +141,36 @@
           <div class="cardHeader" style="text-align: center">
             <h2>Daftar Mobil</h2>
             <div class="table">
-              <a href="../cars/tambahcars.html" class="tambah-data">Tambah Data</a>
+              <a href="web.dashboard.admin.cars.tambahcars" class="tambah-data">Tambah Data</a>
               <table class="table-cust" style="width: 100%; margin-top: 10px;">
+                <thead>
                 <tr>
+                  <th style="display:none">Id</th>
                   <th style="width: 20%">Foto Kondisi</th>
-                  <th style="width: 18%;"> No. Polisi</th>
-                  <th style="width: 13%">Merk</th>
-                  <th style="width: 13%">Brand</th>
-                  <th style="width: 13%">Tahun</th>
-                  <th style="width: 13%">Transmisi</th>
+                  <th style="width: 20%;"> No. Polisi</th>
+                  <th style="width: 17%">Merk</th>
+                  <th style="width: 16%">Tahun</th>
+                  <th style="width: 17%">Transmisi</th>
                   <th style="width: 25%">Action</th>
                 </tr>
-
-                <tr>
-                  <td> <a href="/assets/images/car-1.jpg"> <img src="/assets/images/car-1.jpg" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>M 1346 AB</td>
-                  <td>CRV</td>
-                  <td>Honda</td>
-                  <td>2019</td>
-                  <td>Matic</td>
-                  <td class="action" style="margin-top: 55px;">
-                    <a href=".././cars/editcars.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                </tr>
-
-                <tr>
-                  <td> <a href="/assets/images/car-2.jpg"> <img src="/assets/images/car-2.jpg" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>M 1346 AB</td>
-                  <td>CRV</td>
-                  <td>Honda</td>
-                  <td>2019</td>
-                  <td>Matic</td>
-                  <td class="action" style="margin-top: 55px;">
-                    <a href=".././cars/editcars.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                </tr>
-
-                <tr>
-                  <td> <a href="/assets/images/car-3.jpg"> <img src="/assets/images/car-3.jpg" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>M 1346 AB</td>
-                  <td>CRV</td>
-                  <td>Honda</td>
-                  <td>2019</td>
-                  <td>Matic</td>
-                  <td class="action" style="margin-top: 55px;">
-                    <a href=".././cars/editcars.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                </tr>
-
-                <tr>
-                  <td> <a href="/assets/images/car-4.jpg"> <img src="/assets/images/car-4.jpg" style="width: 100%; ;" alt="Jaminan"> </a> </td>
-                  <td>M 1346 AB</td>
-                  <td>CRV</td>
-                  <td>Honda</td>
-                  <td>2019</td>
-                  <td>Matic</td>
-                  <td class="action" style="margin-top: 55px;">
-                    <a href=".././cars/editcars.html"><button class="deletebutton" style="margin-right: 10px;">Edit</button></a>
-                    <form action="" id="form">
-                      <a href=""><button type="submit" class="deletebutton actionbutton">Delete</button></a>
-                    </form>
-                </tr>
-
+                </thead>
+                <tbody>
+                  @foreach ($cars as $item)
+                  <tr align="center">
+                    <td style="display:none">{{ $item->id }}</td>
+                    <td>{{ $item->foto_mobil}}</td>
+                    <td>{{ $item->no_polisi}}</td>
+                    <td>{{ $item->merk}}</td>
+                    <td>{{ $item->tahun}}</td>
+                    <td>{{ $item->transmisi}}</td>
+                    <td> 
+                      <a href="/web.dashboard.admin.cars.cars/{{ $item->id }}/edit"><button type="button" class="deletebutton">Edit</button></a>
+                      <a href="/web.dashboard.admin.cars.cars/{{ $item->id }}/delete" onclick="return confirm('Konfirmasi penghapusan data Driver?');"><button 
+                      type="submit" class="deletebutton actionbutton">Delete</button></a>
+                    </td>
+                  </tr>
+                @endforeach
+                </tbody>
               </table>
             </div>
           </div>

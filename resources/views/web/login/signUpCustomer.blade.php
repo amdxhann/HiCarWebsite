@@ -24,14 +24,14 @@
         </div>
 
         <div class="forms">
-          <form action="/" id="form">
+          <form action="/web.login.loginCustomer" id="form">
             <div class="input-control">
               <label for="email">Email Adress</label>
               <input type="text" name="email" id="email" />
               <div class="error"></div>
             </div>
             <div class="input-control">
-              <label for="username">Username</label>
+              <label for="nama">Username</label>
               <input type="text" name="username" id="username" />
               <div class="error"></div>
             </div>

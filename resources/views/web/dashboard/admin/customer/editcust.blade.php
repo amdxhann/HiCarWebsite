@@ -25,14 +25,13 @@
               <form action="/web.dashboard.admin.customer.editcust" method="POST">
                 @csrf
                 <input type="hidden" name="id" value="{{$customer->id}}"/>
-
                 <div class="mb-3">
                   <label>Nama</label>
                   <input type="text" name="nama" class="form-control" value="{{$customer->nama}}"/>
                 </div>
                 <div class="mb-3">
                   <label for="">Tanggal Lahir</label>
-                    <input type="text" name="tanggal_lahir" class="form-control" style="margin-top: 10px;" value="{{$customer->tanggal_lahir}}">
+                  <input type="date" name="tanggal_lahir" class="form-control" style="margin-top: 10px;" value="{{$customer->tanggal_lahir}}">
                 </div>
                 <div class="mb-3">
                   <label>Alamat</label>
@@ -43,8 +42,9 @@
                   <input type="text" name="no_sim" class="form-control" value="{{$customer->no_sim}}"/>
                 </div>
                 <div class="mb-3">
-                  <label>Jenis Kelamin</label>
-                  <input type="text" name="jenis_kelamin" class="form-control" value="{{$customer->jenis_kelamin}}"/>
+                  <label >Jenis Kelamin</label> <br>
+                  <input type="radio" name="jenis_kelamin" value="Laki-laki "> Laki-laki<br>
+                  <input type="radio" name="jenis_kelamin" value="Perempuan"> Perempuan<br>                
                 </div>
                 <div class="mb-3">
                   <label>Email</label>

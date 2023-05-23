@@ -78,4 +78,28 @@ class CustomerController extends Controller
             'customer' => customer::all()
         ]);
     }
+
+    // //login
+    // public function createcustomer(Request $request)
+    // {
+    //     $customer=new customer;
+    //     $customer->email=$request->email;
+    //     $customer->nama=$request->nama;
+    //     $customer->alamat=$request->alamat;
+    //     $customer->password = Hash::make($request->password);
+    //     $customer->save();
+        
+    //     return redirect('web.login.loginCustomer')->with("update", "Akun berhasil Berhasil Dibuat!");
+    // }
+
+    // public function logincustomer(Request $request)
+    // {
+    //     $customer=new customer;
+    //     $customer->nama=$request->nama;
+    //     $customer->alamat=$request->alamat;
+    //     $customer->password = Hash::make($request->password);
+    //     $customer->save();
+        
+    //     return redirect('web.dashboard.customer.dashboard')->with("update", "Berhasil LogIn!");
+    // }
 }
