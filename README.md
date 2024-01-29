@@ -1,3 +1,7 @@
+Is a car rental website with the name HiCar, which was created to be able to facilitate travelers in renting four-wheeled vehicles so that it can facilitate mobilization in moving from one place to another. There is also an administrator panel for the admin to manage all business processes that occur on the website.
+
+- A website from the assignment of the Website Programming course.
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
